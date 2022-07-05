@@ -1,0 +1,81 @@
+{
+    "opacity":{
+        "shade":{
+            "value":".16",
+            "type":"opacity",
+            "description":"Shadow Effect."
+        },
+        "shine":{
+            "value":".32",
+            "type":"opacity",
+            "description":"Shadow Effect."
+        },
+        "disable":{
+            "value":".48",
+            "type":"opacity",
+            "description":"Disabled elements."
+        },
+        "semi":{
+            "value":".64",
+            "type":"opacity",
+            "description":"Shadow Effect."
+        },
+        "mute":{
+            "value":".80",
+            "type":"opacity",
+            "description":"Not in usage."
+        }
+    },
+    "zindex":{
+        "deep":{
+            "value":"-99",
+            "type":"other",
+            "description":"Used to stack something behind everything else."
+        },
+        "default":{
+            "value":"100",
+            "type":"other",
+            "description":"For components and elements inside components."
+        },
+        "masked":{
+            "value":"200",
+            "type":"other",
+            "description":"Masked interface elements."
+        },
+        "sticky":{
+            "value":"300",
+            "type":"other",
+            "description":"Sticky interface elements."
+        },
+        "header":{
+            "value":"400",
+            "type":"other",
+            "description":"Header elements."
+        },
+        "toast":{
+            "value":"500",
+            "type":"other",
+            "description":"For toast messages and alerts."
+        },
+        "menu":{
+            "value":"600",
+            "type":"other",
+            "description":"Dropdowns above toasts and sticky elements."
+        },
+        "overlay":{
+            "value":"700",
+            "type":"other",
+            "description":"For modal and popup overlays."
+        },
+        "modal":{
+            "value":"800",
+            "type":"other",
+            "description":"Modal that stacks on top of overlays and other elements."
+        },
+        "poupop":{
+            "value":"900",
+            "type":"other",
+            "description":"Popups that stacks on top of all other elements."
+        }
+    }
+}

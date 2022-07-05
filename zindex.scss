@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use '../utils';
+
+$_zindex:(
+   'deep': -99,
+   'default': 100,
+   'masked': 200,
+   'sticky': 300,
+   'header': 400,
+   'toast': 500,
+   'menu': 600,
+   'overlay': 700,
+   'modal': 800,
+   'poupop': 900,
+);
+
+$_default:(
+   'base': utils.custom-property($_zindex, 'zindex', 'default'),
+);
+
+$_all: ();
+$_all: map.merge($_all, $_zindex);
+$_all: map.merge($_all, $_default);
+
+@function zindex($name){
+   @return utils.custom-property($_all, 'zindex', $name);
+}
+
+$zindex-deep: zindex('deep');
+$zindex-default: zindex('default');
+$zindex-masked: zindex('masked');
+$zindex-sticky: zindex('sticky');
+$zindex-header: zindex('header');
+$zindex-toast: zindex('toast');
+$zindex-menu: zindex('menu');
+$zindex-overlay: zindex('overlay');
+$zindex-modal: zindex('modal');
+$zindex-poupop: zindex('poupop');
+@mixin zindex-token {
+   @include utils.define-tokens($_all, 'zindex')
+}

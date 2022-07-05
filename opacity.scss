@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../utils';
+
+$_opacity:(
+   'shade': .16,
+   'shine': .32,
+   'disable': .48,
+   'semi': .64,
+   'mute': .80,
+);
+
+$_default:(
+   'base': utils.custom-property($_opacity, 'opacity', 'default'),
+);
+
+$_all: ();
+$_all: map.merge($_all, $_opacity);
+$_all: map.merge($_all, $_default);
+
+@function opacity($name){
+   @return utils.custom-property($_all, 'opacity', $name);
+}
+
+$opacity-shade: opacity('shade');
+$opacity-shine: opacity('shine');
+$opacity-disable: opacity('disable');
+$opacity-semi: opacity('semi');
+$opacity-mute: opacity('mute');
+@mixin opacity-token {
+   @include utils.define-tokens($_all, 'opacity')
+}
